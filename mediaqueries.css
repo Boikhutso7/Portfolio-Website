@@ -1,9 +1,108 @@
-@media  screen and (max-width:1200px) {
-    #desktop-nav{
+@media screen and (max-width: 1200px) {
+    #desktop-nav {
         display: none;
-
     }
-    #hamburger-nav{
+    #hamburger-nav {
         display: flex;
+    }
+
+    /* Make sections stack on tablet */
+    section {
+        margin: 0 5rem; /* Reduce side margin */
+        height: auto; /* Allow sections to grow */
+        padding: 4vh 0;
+    }
+
+    #profile {
+        flex-direction: column; /* Stack profile pic and text */
+        gap: 2rem;
+    }
+
+    .section-container {
+        flex-direction: column; /* Stack main content */
+    }
+
+    /* Center profile pic */
+    #profile .section__pic-container {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto;
+    }
+
+    /* Stack About Me boxes */
+    #about .about-containers {
+        flex-direction: column;
+    }
+    
+    /* Center About Me pic */
+    #about .about-pic-container {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section {
+        margin: 0 1.5rem; /* Further reduce margin for phones */
+        padding: 4vh 0;
+    }
+    
+    /* Center profile pic on mobile */
+    #profile .section__pic-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Center About Me pic on mobile */
+    #about .about-pic-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    /* Stack skills boxes */
+    .Skills-details-container .about-containers {
+        flex-direction: column;
+    }
+
+    /* Stack skills items into a single column */
+    .article-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack projects boxes */
+    #projects .about-containers {
+        flex-direction: column;
+    }
+    
+    /* Stack contact info */
+    .contact-info-upper-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .contact-info-container {
+        margin: 0;
+        justify-content: center; /* Center contact items */
+    }
+    .contact-info-container p,
+    .contact-info-container a {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+
+    /* Footer nav */
+    footer nav .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    /* Hide arrows on mobile */
+    .arrow {
+        display: none;
+    }
+
+    /* Adjust titles for mobile */
+    .title {
+        font-size: 2.5rem;
     }
 }
