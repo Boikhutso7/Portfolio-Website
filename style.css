@@ -309,6 +309,7 @@ article .icon {
 /* PROJECTS SECTION */
 #projects {
   position: relative;
+  margin-top: 20rem;
 }
 .color-container {
   border-color: rgb(163, 163, 163);
